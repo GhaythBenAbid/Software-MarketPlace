@@ -1,0 +1,353 @@
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="bg-white">
+    <!--
+      Mobile menu
+  
+      Off-canvas menu for mobile, show/hide based on off-canvas menu state.
+    -->
+
+
+    <header class="relative z-10">
+        <nav aria-label="Top">
+            <!-- Top navigation -->
+            <div class="bg-gray-900">
+                <div class="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <!-- Currency selector -->
+
+
+
+                    <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                        <a class="text-sm font-medium text-white hover:text-gray-100"
+                            [routerLink]="['/register']">Create an account</a>
+                        <span class="h-6 w-px bg-gray-600" aria-hidden="true"></span>
+                        <a class="text-sm font-medium text-white hover:text-gray-100" [routerLink]="['/login']">Sign
+                            in</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary navigation -->
+            <div class="bg-white">
+                <div class="border-b border-gray-200">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div class="flex h-16 items-center justify-between">
+                            <!-- Logo (lg+) -->
+                            <div class="hidden lg:flex lg:items-center">
+                                <a href="#">
+                                    <h1><span class="text-primary text-xl font-black">Software </span> <i class="text-gray-500">Marketplace</i></h1>
+                                    
+                                </a>
+                            </div>
+
+                            
+
+                            <!-- Mobile menu and search (lg-) -->
+                            
+
+                            <!-- Logo (lg-) -->
+                            
+
+                            <div class="flex flex-1 items-center justify-end">
+                                <div class="flex items-center lg:ml-8">
+                                    <div class="flex space-x-8">
+                                        
+
+                                        <div class="flex">
+                                            <a 
+                                            [routerLink]="['/login']"
+                                            class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                                                <span class="sr-only">Account</span>
+                                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <span class="mx-4 h-6 w-px bg-gray-200 lg:mx-6" aria-hidden="true"></span>
+
+                                    <div class="flow-root">
+                                        <a href="#" class="group -m-2 flex items-center p-2">
+                                            <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                            </svg>
+                                            <span
+                                                class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                                            <span class="sr-only">items in cart, view bag</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <div class="flex flex-col border-b border-gray-200 lg:border-0">
+
+
+            <div class="relative">
+                <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-gray-100 lg:block"></div>
+                <div class="relative bg-gray-100 lg:bg-transparent">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
+                        <div class="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
+                            <div class="lg:pr-16">
+                                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">Concentrez-vous sur ce qui compte</h1>
+                                <p class="mt-4 text-xl text-gray-600">
+                                    Bienvenue sur notre place de marché des logiciels, là où l'efficacité rencontre l'innovation. Explorez une collection soigneusement sélectionnée de solutions logicielles professionnelles conçues pour rationaliser les opérations, améliorer la productivité et stimuler la croissance. 
+                                </p>
+                                <div class="mt-6">
+                                    <a href="#"
+                                        class="inline-block rounded-md border border-transparent bg-primary px-8 py-3 font-medium text-white hover:bg-primary">Shop
+                                        Productivity</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-48 w-full sm:h-64 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-1/2">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-hero-half-width.jpg" alt=""
+                        class="h-full w-full object-cover object-center">
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending products -->
+        <section aria-labelledby="trending-heading" class="bg-white">
+            <div class="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:py-32">
+                <div class="flex items-center justify-between px-4 sm:px-6 lg:px-0">
+                    <h2 id="trending-heading" class="text-2xl font-bold tracking-tight text-gray-900">
+                        Les logiciels les plus populaires
+                    </h2>
+                    <a href="#" class="hidden text-sm font-semibold text-primary hover:text-primary sm:block">
+                        See everything
+                        <span aria-hidden="true"> &rarr;</span>
+                    </a>
+                </div>
+
+                <div class="relative mt-8">
+                    <div class="relative w-full overflow-x-auto">
+                        <ul role="list"
+                            class="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0">
+                            <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                                <div class="group relative">
+                                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg"
+                                            alt="Black machined steel pen with hexagonal grip and small white logo at top."
+                                            class="h-full w-full object-cover object-center group-hover:opacity-75">
+                                    </div>
+                                    <div class="mt-6">
+                                        <p class="text-sm text-gray-500">Black</p>
+                                        <h3 class="mt-1 font-semibold text-gray-900">
+                                            <a href="#">
+                                                <span class="absolute inset-0"></span>
+                                                Machined Pen
+                                            </a>
+                                        </h3>
+                                        <p class="mt-1 text-gray-900">$35</p>
+                                    </div>
+                                </div>
+
+                                <h4 class="sr-only">Available colors</h4>
+                                <ul role="list" class="mt-auto flex items-center justify-center space-x-3 pt-6">
+                                    <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                        style="background-color: #111827">
+                                        <span class="sr-only">Black</span>
+                                    </li>
+                                    <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                        style="background-color: #fde68a">
+                                        <span class="sr-only">Brass</span>
+                                    </li>
+                                    <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                        style="background-color: #e5e7eb">
+                                        <span class="sr-only">Chrome</span>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- More products... -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12 px-4 sm:hidden">
+                    <a href="#" class="text-sm font-semibold text-primary hover:text-primary">
+                        Voir tout
+                        <span aria-hidden="true"> &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collections -->
+        <section aria-labelledby="collections-heading" class="bg-gray-100">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+                    <h2 id="collections-heading" class="text-2xl font-bold text-gray-900">
+                        Catégories populaires
+                    </h2>
+
+                    <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                        <div class="group relative">
+                            <div
+                                class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg"
+                                    alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                                    class="h-full w-full object-cover object-center">
+                            </div>
+                            <h3 class="mt-6 text-sm text-gray-500">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Desk and Office
+                                </a>
+                            </h3>
+                            <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
+                        </div>
+                        <div class="group relative">
+                            <div
+                                class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg"
+                                    alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
+                                    class="h-full w-full object-cover object-center">
+                            </div>
+                            <h3 class="mt-6 text-sm text-gray-500">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Self-Improvement
+                                </a>
+                            </h3>
+                            <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
+                        </div>
+                        <div class="group relative">
+                            <div
+                                class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg"
+                                    alt="Collection of four insulated travel bottles on wooden shelf."
+                                    class="h-full w-full object-cover object-center">
+                            </div>
+                            <h3 class="mt-6 text-sm text-gray-500">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Travel
+                                </a>
+                            </h3>
+                            <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sale and testimonials -->
+        <div class="relative overflow-hidden">
+            <!-- Decorative background image and gradient -->
+            <div aria-hidden="true" class="absolute inset-0">
+                <div class="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-sale-full-width.jpg" alt=""
+                        class="h-full w-full object-cover object-center">
+                </div>
+                <div class="absolute inset-0 bg-white bg-opacity-75"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-white"></div>
+            </div>
+
+            <!-- Sale -->
+            <section aria-labelledby="sale-heading"
+                class="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-32 text-center sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:max-w-none">
+                    <h2 id="sale-heading"
+                        class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                        Ne manquez pas notre vente d'une seule fois
+                    </h2>
+                    <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">
+                        logiciels professionnels conçus pour rationaliser les opérations, améliorer la productivité et stimuler la croissance.
+                    </p>
+                    <a href="#"
+                        class="mt-6 inline-block w-full rounded-md border border-transparent bg-gray-900 px-8 py-3 font-medium text-white hover:bg-gray-800 sm:w-auto">
+                    Acheter maintenant
+                    </a>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section aria-labelledby="testimonial-heading"
+                class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+                <div class="mx-auto max-w-2xl lg:max-w-none">
+                    <h2 id="testimonial-heading" class="text-2xl font-bold tracking-tight text-gray-900">
+                        Ce que nos clients disent
+                    </h2>
+
+                    <div class="mt-16 space-y-16 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+                        <blockquote class="sm:flex lg:block">
+                            <svg width="24" height="18" viewBox="0 0 24 18" aria-hidden="true"
+                                class="flex-shrink-0 text-gray-300">
+                                <path
+                                    d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="mt-8 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-10">
+                                <p class="text-lg text-gray-600">My order arrived super quickly. The product is even
+                                    better than I hoped it would be. Very happy customer over here!</p>
+                                <cite class="mt-4 block font-semibold not-italic text-gray-900">Sarah Peters, New
+                                    Orleans</cite>
+                            </div>
+                        </blockquote>
+                        <blockquote class="sm:flex lg:block">
+                            <svg width="24" height="18" viewBox="0 0 24 18" aria-hidden="true"
+                                class="flex-shrink-0 text-gray-300">
+                                <path
+                                    d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="mt-8 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-10">
+                                <p class="text-lg text-gray-600">I had to return a purchase that didn’t fit. The whole
+                                    process was so simple that I ended up ordering two new items!</p>
+                                <cite class="mt-4 block font-semibold not-italic text-gray-900">Kelly McPherson,
+                                    Chicago</cite>
+                            </div>
+                        </blockquote>
+                        <blockquote class="sm:flex lg:block">
+                            <svg width="24" height="18" viewBox="0 0 24 18" aria-hidden="true"
+                                class="flex-shrink-0 text-gray-300">
+                                <path
+                                    d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="mt-8 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-10">
+                                <p class="text-lg text-gray-600">Now that I’m on holiday for the summer, I’ll probably
+                                    order a few more shirts. It’s just so convenient, and I know the quality will always
+                                    be there.</p>
+                                <cite class="mt-4 block font-semibold not-italic text-gray-900">Chris Paul,
+                                    Phoenix</cite>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+</div>
