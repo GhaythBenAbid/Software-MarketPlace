@@ -1,9 +1,10 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-import { Field, InputType, Int, ObjectType } from '@nestjs/graphql';
+import { Directive, Field, InputType, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
-@InputType("AdminInput")
 @Entity()
+@Directive(`@key(fields: "id")`)
+@Directive('@shareable')
 export class Admin {
 
     @Field(() => Int)
@@ -29,6 +30,10 @@ export class Admin {
     @Field()
     @Column()
     adresse: string;
+
+    @Field()
+    @Column()
+    photo : string;
 
     //CHECK
     // @Field() : any;

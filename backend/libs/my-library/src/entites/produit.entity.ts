@@ -1,11 +1,14 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
-import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Directive, Field, Int, ObjectType } from '@nestjs/graphql';
 import { Categorie } from './categorie.entity';
 import { Vendeur } from './vendeur.entity';
 import { LigneCommande } from './ligne_commande.entity';
+import { Evaluation } from './evaluation.entity';
 
 @ObjectType()
 @Entity()
+@Directive(`@key(fields: "id")`)
+@Directive('@shareable')
 export class Produit {
 
     @Field(() => Int)
@@ -32,6 +35,11 @@ export class Produit {
     @Column()
     quantite: number;
 
+    //created_at
+    @Field()
+    @Column({type: 'timestamp', default: () => 'CURRENT_TIMESTAMP'})
+    created_at: Date;
+
     @Field(() => Categorie)
     @ManyToOne(() => Categorie, categorie => categorie.produits)
     categorie: Categorie;
@@ -43,7 +51,9 @@ export class Produit {
     @Field(() => [LigneCommande])
     ligneCommandes: LigneCommande[];
 
+    @Field(() => [Evaluation])
+    evaluations : Evaluation[];
 
-    //toadd
+
 
 }

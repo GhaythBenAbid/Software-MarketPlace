@@ -1,9 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
-import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Directive, Field, Int, ObjectType } from '@nestjs/graphql';
 import { Client } from './client.entity';
 
 @ObjectType()
 @Entity()
+@Directive(`@key(fields: "id")`)
+@Directive('@shareable')
 export class Reclamation {
 
     @Field(() => Int)

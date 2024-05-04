@@ -1,0 +1,83 @@
+<app-sidebar></app-sidebar>
+
+<main class=" lg:pl-72">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="bg-white">
+            
+          
+            
+          
+            <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:pb-32 sm:pt-24 lg:px-8">
+              <div class="max-w-xl">
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+                    Mes commandes
+                </h1>
+                <p class="mt-2 text-sm text-gray-500">
+                    Vous trouverez ici toutes vos commandes passées
+                </p>
+              </div>
+          
+              <div class="mt-12 space-y-16 sm:mt-16">
+                <section aria-labelledby="4376-heading" *ngFor="let commande of commandes" class="space-y-6">
+                  <div class="space-y-1 md:flex md:items-baseline md:space-x-4 md:space-y-0">
+                    <h2 id="4376-heading" class="text-lg font-medium text-gray-900 md:flex-shrink-0">Order #{{commande.id}}</h2>
+                    <div class="space-y-5 sm:flex sm:items-baseline sm:justify-between sm:space-y-0 md:min-w-0 md:flex-1">
+                      <p class="text-sm font-medium text-gray-500">
+                        le {{commande.date_commande | date}}
+                        <span *ngIf="commande.status == 'En attente'" class="mx-2 inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-600 ring-1 ring-inset ring-yellow-500/10">En attente</span>
+                        <span *ngIf="commande.status == 'Annulé'" class="mx-2 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-600 ring-1 ring-inset ring-red-500/10">Annulé</span>
+                        <span *ngIf="commande.status == 'Complété'" class="mx-2 inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-600 ring-1 ring-inset ring-green-500/10">Complété</span>
+
+                      </p>
+                      <div class="flex text-sm font-medium">
+                        <div class="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
+                          <a 
+                          [routerLink]="['/facture', commande.id]"
+                          class="text-primary hover:text-primaryDark">
+                            Voir la facture
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="-mb-6 mt-6 flow-root divide-y divide-gray-200 border-t border-gray-200">
+                    <div class="py-6 sm:flex" *ngFor="let produit of commande.ligneCommandes">
+                      <div class="flex space-x-4 sm:min-w-0 sm:flex-1 sm:space-x-6 lg:space-x-8">
+                        <img src="{{produit.produit.image}}" alt="Brass puzzle in the shape of a jack with overlapping rounded posts." class="h-20 w-20 flex-none rounded-md object-cover object-center sm:h-48 sm:w-48">
+                        <div class="min-w-0 flex-1 pt-1.5 sm:pt-0">
+                          <h3 class="text-sm font-medium text-gray-900">
+                            <a href="#">
+                                {{produit.produit.nom_produit}}
+                            </a>
+                          </h3>
+                          <p class="truncate text-sm text-gray-500">
+                            {{produit.produit.description}}
+                            
+                          </p>
+                          <p class="mt-1 font-medium text-gray-900">
+                            {{produit.quantite}} X {{produit.produit.prix}} TND
+                          </p>
+                        </div>
+                      </div>
+                      <div class="mt-6 space-y-4 sm:ml-6 sm:mt-0 sm:w-40 sm:flex-none">
+                        <a 
+                        [routerLink]="['/produit', produit.produit.id]"
+                        type="button" class="flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-2.5 py-2 text-sm font-medium text-white shadow-sm hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-primaryDark focus:ring-offset-2 sm:w-full sm:flex-grow-0">
+                            voir le produit
+                        </a>
+                      </div>
+                    </div>
+          
+                    <!-- More products... -->
+                  </div>
+                </section>
+          
+                <!-- More orders... -->
+              </div>
+            </main>
+          
+            
+          </div>
+    </div>
+</main>

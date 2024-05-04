@@ -21,61 +21,77 @@
   ```
 -->
 <div class="flex min-h-screen">
-    <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-      <div class="mx-auto w-full max-w-sm lg:w-96">
-        <div>
-            <h1><span class="text-primary text-xl font-black">Software </span> <i class="text-gray-500">Marketplace</i></h1>
+  <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="mx-auto w-full max-w-sm lg:w-96">
+      <div>
+        <h1><span class="text-primary text-xl font-black">Software </span> <i class="text-gray-500">Marketplace</i></h1>
 
-          <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Register
-          </h2>
-          <p class="mt-2 text-sm leading-6 text-gray-500">
-            Or
-            <a 
-            [routerLink]="['/login']"
-            class="font-semibold text-primary hover:text-primary">sign in to your account</a>
-          </p>
+        <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Register
+        </h2>
+        <p class="mt-2 text-sm leading-6 text-gray-500">
+          Or
+          <a [routerLink]="['/login']" class="font-semibold text-primary hover:text-primary">sign in to your account</a>
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <div>
+          <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)" class="space-y-6">
+            <div>
+              <label for="role" class="block text-sm font-medium leading-6 text-gray-900">Role</label>
+              <div class="mt-2">
+                <select ngModel id="role" name="type" required
+                  class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+                  <option value="client">Client</option>
+                  <option value="vendeur">Vendeur</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div>
+              <label for="firstName" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
+              <div class="mt-2">
+                <input ngModel id="firstName" name="nom" type="firstName" autocomplete="firstName" required
+                  class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <div>
+              <label for="lastName" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
+              <div class="mt-2">
+                <input ngModel id="lastName" name="prenom" type="lastName" autocomplete="lastName" required
+                  class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+              <div class="mt-2">
+                <input ngModel id="email" name="email" type="email" autocomplete="email" required
+                  class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+              </div>
+            </div>
+
+            <div>
+              <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+              <div class="mt-2">
+                <input ngModel id="password" name="motdepasse" type="password" autocomplete="current-password" required
+                  class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+              </div>
+            </div>
+
+
+
+            <div>
+              <button type="submit"
+                class="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Sign
+                in</button>
+            </div>
+          </form>
         </div>
-  
-        <div class="mt-10">
-          <div>
-            <form action="#" method="POST" class="space-y-2">
-              <div>
-                <label for="firstName" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
-                <div class="mt-2">
-                  <input id="firstName" name="firstName" type="firstName" autocomplete="firstName" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
-                </div>
-              </div>
-              <div>
-                <label for="lastName" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
-                <div class="mt-2">
-                  <input id="lastName" name="lastName" type="lastName" autocomplete="lastName" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
-                </div>
-                </div>
-              
-              <div>
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-                <div class="mt-2">
-                  <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
-                </div>
-              </div>
-  
-              <div>
-                <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
-                <div class="mt-2">
-                  <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
-                </div>
-              </div>
-  
-              
-  
-              <div>
-                <button type="submit" class="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Sign in</button>
-              </div>
-            </form>
-          </div>
-  
-          <!-- <div class="mt-10">
+
+        <!-- <div class="mt-10">
             <div class="relative">
               <div class="absolute inset-0 flex items-center" aria-hidden="true">
                 <div class="w-full border-t border-gray-200"></div>
@@ -96,11 +112,12 @@
               </a>
             </div>
           </div> -->
-        </div>
       </div>
     </div>
-    <div class="relative hidden w-0 flex-1 lg:block">
-      <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80" alt="">
-    </div>
   </div>
-  
+  <div class="relative hidden w-0 flex-1 lg:block">
+    <img class="absolute inset-0 h-full w-full object-cover"
+      src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
+      alt="">
+  </div>
+</div>

@@ -1,0 +1,126 @@
+<app-sidebar></app-sidebar>
+<main class="py-10 lg:pl-72">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="w-full">
+
+            <div class="md:flex w-11/12 mb-5 mx-auto md:items-center md:justify-between">
+                <div class="flex items-start space-x-5">
+                    <div class="flex-shrink-0">
+                        <div class="relative">
+                            <img class="object-contain w-16 h-16 rounded-full" style="object-fit: cover;"
+                                src="{{user.photo ? user.photo : 'https://ui-avatars.com/api/?name='+user.nom+'+'+user.prenom+'&background=random&color=fff'}}"
+                                alt="">
+                            <span class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h1 class="text-2xl font-bold text-gray-900">{{user.nom}} {{user.prenom}}</h1>
+                        <p class="text-sm font-medium text-gray-500">
+                            Vendeur en ligne chez <span class="text-primary font-black">Software </span> <i
+                                class="text-gray-500">Marketplace</i>
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="mt-6 flex flex-col-reverse justify-stretch space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-x-3 sm:space-y-0 sm:space-x-reverse md:mt-0 md:flex-row md:space-x-3">
+                    <button type="button" [routerLink]="['/profile']"
+                        class="inline-flex items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                        Modifier Profil
+                    </button>
+                    <button type="button" [routerLink]="['/vendeur/produit/add']"
+                        class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primaryDark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                        Ajouter Produit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <dl class="mx-auto grid grid-cols-1 gap-px bg-gray-900/5 sm:grid-cols-2 lg:grid-cols-4">
+            <div
+                class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+                <dt class="text-sm font-medium leading-6 text-gray-500">
+                    Nombre de produits
+                </dt>
+                <dd class="text-xs font-medium text-gray-700">
+                </dd>
+                <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-primary">
+                    {{produits.length}}
+                </dd>
+            </div>
+            <div
+                class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+                <dt class="text-sm font-medium leading-6 text-gray-500">
+                    Revenue
+                </dt>
+                <dd class="text-xs font-medium text-rose-600">
+
+                </dd>
+                <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-primary">$12,787.00
+                </dd>
+            </div>
+            <div
+                class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+                <dt class="text-sm font-medium leading-6 text-gray-500">
+
+                </dt>
+                <dd class="text-xs font-medium text-gray-700">-1.39%</dd>
+                <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-primary">$245,988.00
+                </dd>
+            </div>
+            <div
+                class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+                <dt class="text-sm font-medium leading-6 text-gray-500">Expenses</dt>
+                <dd class="text-xs font-medium text-rose-600">+10.18%</dd>
+                <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-primary">$30,156.00
+                </dd>
+            </div>
+        </dl>
+
+        <div class="bg-white">
+            <div class="mx-auto max-w-2xl px-4 sm:px-6 sm:py-4 lg:max-w-7xl lg:px-8">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+                    Mes produits
+                </h2>
+
+                <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    <div *ngFor="let produit of produits">
+                        <div
+                            class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            <img src="{{produit.image}}" alt="Front of men&#039;s Basic Tee in black."
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700">
+                                    <div>
+                                        {{produit.nom_produit}}
+                                    </div>
+                                </h3>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900">{{produit.prix}} TND</p>
+                        </div>
+                        <!-- button to view in store -->
+                        <div class="mt-2 flex">
+                            <button [routerLink]="['/vendeur/produit', produit.id]"
+                                class="inline-flex mr-2 items-center justify-center rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primaryDark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                                Voir
+                            </button>
+                            <button
+                                class="inline-flex ml-2 items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                                Modifier
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- More products... -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>

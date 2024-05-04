@@ -1,9 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Directive, Field, Int, ObjectType } from '@nestjs/graphql';
 import { Produit } from './produit.entity';
 
 @ObjectType()
 @Entity()
+@Directive(`@key(fields: "id")`)
+@Directive('@shareable')
 export class Vendeur {
 
     @Field(() => Int)
@@ -12,11 +14,11 @@ export class Vendeur {
 
     @Field()
     @Column()
-    firstName: string;
+    nom: string;
 
     @Field()
     @Column()
-    lastName: string;
+    prenom: string;
 
     @Field()
     @Column({unique: true})
@@ -24,15 +26,19 @@ export class Vendeur {
 
     @Field()
     @Column()
-    password: string;
+    motdepasse: string;
 
     @Field()
     @Column()
-    address: string;
+    adresse: string;
 
     @Field()
     @Column()
-    phone : string;
+    telephone : string;
+
+    @Field()
+    @Column()
+    photo : string;
 
     @Field(() => [Produit])
     produits: Produit[];

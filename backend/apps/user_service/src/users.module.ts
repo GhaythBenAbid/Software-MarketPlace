@@ -6,6 +6,10 @@ import { ApolloDriver, ApolloDriverConfig, ApolloFederationDriver, ApolloFederat
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { mySQLConfig } from '@app/my-library/config/mySqlConfig';
 import { AdminsModule } from './admins/admins.module';
+import { ClientsModule } from './clients/clients.module';
+import { VendeursModule } from './vendeurs/vendeurs.module';
+import { ReclamationsModule } from './reclamations/reclamations.module';
+import { AuthsModule } from './auths/auths.module';
 
 @Module({
   imports: [
@@ -17,6 +21,10 @@ import { AdminsModule } from './admins/admins.module';
     }),
     mySQLConfig(),
     AdminsModule,
+    ClientsModule,
+    VendeursModule,
+    ReclamationsModule,
+    AuthsModule,
   ],
   providers: [UsersResolver, UsersService],
 })

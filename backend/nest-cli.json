@@ -36,6 +36,33 @@
       "compilerOptions": {
         "tsConfigPath": "libs/my-library/tsconfig.lib.json"
       }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    },
+    "produit_service": {
+      "type": "application",
+      "root": "apps/produit_service",
+      "entryFile": "main",
+      "sourceRoot": "apps/produit_service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/produit_service/tsconfig.app.json"
+      }
+    },
+    "commande_service": {
+      "type": "application",
+      "root": "apps/commande_service",
+      "entryFile": "main",
+      "sourceRoot": "apps/commande_service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/commande_service/tsconfig.app.json"
+      }
     }
   }
 }

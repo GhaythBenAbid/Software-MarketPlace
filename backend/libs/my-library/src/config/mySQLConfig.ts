@@ -8,6 +8,7 @@ import { Admin } from "../entites/admin.entity";
 import { Commande } from "../entites/commande.entity";
 import { Facture } from "../entites/facture.entity";
 import { LigneCommande } from "../entites/ligne_commande.entity";
+import { Evaluation } from "../entites/evaluation.entity";
 
 
 export function mySQLConfig() {
@@ -19,7 +20,7 @@ export function mySQLConfig() {
         password: '',
         database: 'nestjs',
         entities: [
-            Admin, Categorie, Client, Commande, Facture, LigneCommande, Produit, Reclamation, Vendeur
+            Admin, Categorie, Client, Commande, Facture, LigneCommande, Produit, Reclamation, Vendeur , Evaluation
         ],
         synchronize: true,
         autoLoadEntities: true,

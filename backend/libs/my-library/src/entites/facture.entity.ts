@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne } from 'typeorm';
-import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Directive, Field, Int, ObjectType } from '@nestjs/graphql';
 import { Produit } from './produit.entity';
 import { Client } from './client.entity';
 import { LigneCommande } from './ligne_commande.entity';
@@ -7,6 +7,8 @@ import { Commande } from './commande.entity';
 
 @ObjectType()
 @Entity()
+@Directive(`@key(fields: "id")`)
+@Directive('@shareable')
 export class Facture {
 
     @Field(() => Int)
@@ -24,5 +26,6 @@ export class Facture {
     @Field(() => Commande)
     @OneToOne(() => Commande, commande => commande.facture)
     commande: Commande;
+    
 
 }

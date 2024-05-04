@@ -1,9 +1,12 @@
+import { Admin } from '@app/my-library/entites/admin.entity';
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { CreateAdminInput } from './dto/create-admin.input';
 import { UpdateAdminInput } from './dto/update-admin.input';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Admin } from '@app/my-library/entites/admin.entity';
-import { Repository } from 'typeorm';
+import * as bcrypt from 'bcrypt';
+
+
 
 @Injectable()
 export class AdminsService {
@@ -11,8 +14,9 @@ export class AdminsService {
     @InjectRepository(Admin)
     private adminsRepository: Repository<Admin>,
   ) { }
-  create(createAdminInput: Admin) {
-    return this.adminsRepository.save(createAdminInput);
+  create(admin: CreateAdminInput) {
+    admin.motdepasse = bcrypt.hashSync(admin.motdepasse, 10);
+    return this.adminsRepository.save(admin);
   }
 
   findAll() {
@@ -23,7 +27,7 @@ export class AdminsService {
     return this.adminsRepository.findOne({ where: { id } });
   }
 
-  update(id: number, updateAdminInput: Admin) {
+  update(id: number, updateAdminInput: UpdateAdminInput) {
     return this.adminsRepository.update(id, updateAdminInput);
   }
 

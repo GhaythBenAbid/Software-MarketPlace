@@ -1,157 +1,198 @@
-<app-navbar></app-navbar>
 <div class="bg-white">
-    <!-- Header -->
-    
-  
-    <main class="isolate">
-      <!-- Hero section -->
-      <div class="relative isolate -z-10">
-        <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
-          <defs>
-            <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-              <path d="M.5 200V.5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
-          </svg>
-          <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
+  <!-- Header -->
+
+
+  <main class="isolate">
+    <!-- Hero section -->
+    <div class="relative isolate -z-10">
+      <svg
+        class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+        aria-hidden="true">
+        <defs>
+          <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1"
+            patternUnits="userSpaceOnUse">
+            <path d="M.5 200V.5H200" fill="none" />
+          </pattern>
+        </defs>
+        <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+          <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+            stroke-width="0" />
         </svg>
-        <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48" aria-hidden="true">
-          <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
+        <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
+      </svg>
+      <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+        aria-hidden="true">
+        <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)">
         </div>
-        <div class="overflow-hidden">
-          <div class="mx-auto max-w-7xl px-6  lg:px-8">
-            <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-              <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    <span class="block">
-                        Bienvenue sur
-                    </span>
-                    <span class="block text-primary">Software Marketplace</span>
-                </h1>
-                <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    le meilleur endroit pour trouver des logiciels de qualité à des prix abordables
-                </p>
-                <button (click)="scrollToProducts()" class="mt-8 inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white bg-primary rounded-lg shadow-lg hover:bg-primary-dark focus-visible:ring focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-white">Découvrir</button>
+      </div>
+      <div class="overflow-hidden">
+        <div class="mx-auto max-w-7xl px-6  lg:px-8">
+          <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+            <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                <span class="block">
+                  Bienvenue sur
+                </span>
+                <span class="block text-primary">Software Marketplace</span>
+              </h1>
+              <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                le meilleur endroit pour trouver des logiciels de qualité à des prix abordables
+              </p>
+              <button (click)="scrollToProducts()"
+                class="mt-8 inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white bg-primary rounded-lg shadow-lg hover:bg-primary-dark focus-visible:ring focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-white">Découvrir</button>
+            </div>
+            <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+              <div
+                class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                    alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                </div>
               </div>
-              <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                  <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                  </div>
+              <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                    alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
-                <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                  <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                  </div>
-                  <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                  </div>
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                    alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
-                <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                  <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                  </div>
-                  <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                  </div>
+              </div>
+              <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+                    alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                </div>
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                    alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-    </main>
-  
-    <!-- Footer -->
-    
-  </div>
+    </div>
+    <!-- svg arrow down -->
+    <div class="absolute inset-x-0 bottom-0 flex justify-center">
+      <svg class="w-8 h-8 text-gray-900 animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+
+</div>
 <div class="bg-white">
-    <div class="mx-auto max-w-2xl px-4 py-8 sm:px-6  lg:max-w-7xl lg:px-8">
-      <h2 id="products" class="sr-only">Products</h2>
-  
-      <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">
-        <div class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
-          <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
-            <img src="https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-01.jpg" alt="Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green." class="h-full w-full object-cover object-center sm:h-full sm:w-full">
+  <div class="mx-auto mt-8 max-w-2xl px-4 py-8 sm:px-6  lg:max-w-7xl lg:px-8">
+    <h2 id="products" class="sr-only">
+      Les logiciels disponibles
+    </h2>
+
+    <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">
+      <div *ngFor="let produit of produits"
+        class="relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
+          <img
+            src="{{produit.image ?? 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'}}"
+            alt="Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green."
+            class="h-full w-full object-cover object-center sm:h-full sm:w-full">
+        </div>
+        <div class="flex flex-1 flex-col space-y-2 p-4">
+          <h3 class="text-sm font-medium text-gray-900">
+            <p>
+              {{produit.nom_produit}}
+            </p>
+          </h3>
+          <p class="text-sm text-gray-500">{{produit.description}}</p>
+          <div class="flex flex-1 flex-col justify-end">
+            <p class="text-sm italic text-gray-500">
+              {{produit.categorie.nom_categorie}}
+            </p>
+            <p class="text-base font-medium text-gray-900">TND {{produit.prix}}</p>
+            <a href="/produit/{{produit.id}}"
+              class="mt-2 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg shadow-lg hover:bg-primary-dark focus-visible:ring focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-white">
+              Voir plus
+            </a>
           </div>
-          <div class="flex flex-1 flex-col space-y-2 p-4">
-            <h3 class="text-sm font-medium text-gray-900">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Basic Tee 8-Pack
-              </a>
-            </h3>
-            <p class="text-sm text-gray-500">Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.</p>
-            <div class="flex flex-1 flex-col justify-end">
-              <p class="text-sm italic text-gray-500">8 colors</p>
-              <p class="text-base font-medium text-gray-900">$256</p>
+        </div>
+      </div>
+
+
+      <!-- More products... -->
+    </div>
+  </div>
+</div>
+<div class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <svg
+    class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    aria-hidden="true">
+    <defs>
+      <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="50%" y="-64"
+        patternUnits="userSpaceOnUse">
+        <path d="M100 200V.5M.5 .5H200" fill="none" />
+      </pattern>
+    </defs>
+    <svg x="50%" y="-64" class="overflow-visible fill-gray-50">
+      <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M299.5 800h201v201h-201Z"
+        stroke-width="0" />
+    </svg>
+    <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+  </svg>
+  <div class="mx-auto max-w-xl lg:max-w-4xl">
+    <h2 class="text-4xl font-bold tracking-tight text-gray-900">
+      Partagez votre réclamation
+    </h2>
+    <p class="mt-2 text-lg leading-8 text-gray-600">
+      Nous sommes toujours à l'écoute de nos clients. N'hésitez pas à nous contacter pour toute réclamation.
+
+    </p>
+    <div class="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
+      <form action="#" method="POST" class="lg:flex-auto">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+
+
+
+
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+            <div class="mt-2.5">
+              <textarea [(ngModel)]="message" id="message" name="message" rows="4"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"></textarea>
             </div>
           </div>
         </div>
-        <div class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
-          <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
-            <img src="https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-02.jpg" alt="Front of plain black t-shirt." class="h-full w-full object-cover object-center sm:h-full sm:w-full">
-          </div>
-          <div class="flex flex-1 flex-col space-y-2 p-4">
-            <h3 class="text-sm font-medium text-gray-900">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Basic Tee
-              </a>
-            </h3>
-            <p class="text-sm text-gray-500">Look like a visionary CEO and wear the same black t-shirt every day.</p>
-            <div class="flex flex-1 flex-col justify-end">
-              <p class="text-sm italic text-gray-500">Black</p>
-              <p class="text-base font-medium text-gray-900">$32</p>
-            </div>
-          </div>
+        <div class="mt-10">
+          <button (click)="sendContactMessage()"
+            class="block w-full rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primaryDark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+            Envoyer
+          </button>
         </div>
-  
-        <!-- More products... -->
+        <p class="mt-4 text-sm leading-6 text-gray-500">By submitting this form, I agree to the <a href="#"
+            class="font-semibold text-primary">privacy&nbsp;policy</a>.</p>
+      </form>
+      <div class="lg:mt-6 lg:w-80 lg:flex-none">
+        <svg class="w-full h-full text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+        </svg>
       </div>
     </div>
   </div>
-
-
-<div class="bg-white">
-    <div class="mx-auto max-w-2xl px-4  sm:px-6 lg:max-w-7xl lg:px-8">
-      <div class="flex items-center justify-between space-x-4">
-        <h2 class="text-lg font-medium text-gray-900">Customers also viewed</h2>
-        <a href="#" class="whitespace-nowrap text-sm font-medium text-indigo-600 hover:text-indigo-500">
-          View all
-          <span aria-hidden="true"> &rarr;</span>
-        </a>
-      </div>
-      <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-        <div class="group relative">
-          <div class="aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-cover object-center">
-            <div class="flex items-end p-4 opacity-0 group-hover:opacity-100" aria-hidden="true">
-              <div class="w-full rounded-md bg-white bg-opacity-75 px-4 py-2 text-center text-sm font-medium text-gray-900 backdrop-blur backdrop-filter">View Product</div>
-            </div>
-          </div>
-          <div class="mt-4 flex items-center justify-between space-x-8 text-base font-medium text-gray-900">
-            <h3>
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Fusion
-              </a>
-            </h3>
-            <p>$49</p>
-          </div>
-          <p class="mt-1 text-sm text-gray-500">UI Kit</p>
-        </div>
-  
-        <!-- More products... -->
-      </div>
-    </div>
-  </div>
-  
+</div>

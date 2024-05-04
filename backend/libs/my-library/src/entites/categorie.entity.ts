@@ -1,9 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Directive, Field, Int, ObjectType } from '@nestjs/graphql';
 import { Produit } from './produit.entity';
 
 @ObjectType()
 @Entity()
+@Directive(`@key(fields: "id")`)
+@Directive('@shareable')
 export class Categorie {
 
     @Field(() => Int)
@@ -19,6 +21,7 @@ export class Categorie {
     image: string;
 
     @Field(() => [Produit])
+    @OneToMany(() => Produit, produit => produit.categorie)
     produits: Produit[];
     //toadd
 
